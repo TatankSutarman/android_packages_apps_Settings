@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ax_dynamic_bar_title">Dynamic bar</string>
+    <string name="ax_dynamic_bar_summary">Show media, calls, screen recording, and other ongoing activities around the camera cutout. The equivalent status bar chips are hidden while this is on.</string>
+    <string name="keywords_ax_dynamic_bar">dynamic bar, dynamic island, camera cutout, ongoing activity, media, call, screen recording</string>
+</resources>
