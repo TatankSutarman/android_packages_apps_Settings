@@ -28,6 +28,18 @@
         settings:keywords="@string/keywords_ax_dynamic_bar" />
 
     <PreferenceCategory
+        android:key="dynamic_bar_category_lockscreen"
+        android:title="@string/ax_dynamic_bar_category_lockscreen">
+
+        <SwitchPreferenceCompat
+            android:key="infinity_bar_lockscreen_media_enabled"
+            android:title="@string/ax_dynamic_bar_lockscreen_media_title"
+            android:summary="@string/ax_dynamic_bar_lockscreen_media_summary"
+            android:persistent="false"
+            settings:keywords="@string/keywords_ax_dynamic_bar_lockscreen_media" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="dynamic_bar_category_media"
         android:title="@string/ax_dynamic_bar_category_media">
 

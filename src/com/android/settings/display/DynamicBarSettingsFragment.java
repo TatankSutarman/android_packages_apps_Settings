@@ -53,6 +53,8 @@ public class DynamicBarSettingsFragment extends DashboardFragment {
     private static final String TAG = "DynamicBarSettings";
 
     private static final String KEY_ENABLED = "ax_dynamic_bar_enabled";
+    private static final String KEY_LOCKSCREEN_MEDIA_ENABLED =
+            "infinity_bar_lockscreen_media_enabled";
     private static final String KEY_EVENTS = "ax_dynamic_bar_events";
     private static final String KEY_ENABLE_ALL = "dynamic_bar_enable_all";
     private static final String KEY_RESET_DEFAULTS = "dynamic_bar_reset_defaults";
@@ -119,6 +121,26 @@ public class DynamicBarSettingsFragment extends DashboardFragment {
                 final boolean written = Settings.Secure.putIntForUser(
                         requireContext().getContentResolver(),
                         KEY_ENABLED,
+                        value ? 1 : 0,
+                        UserHandle.myUserId());
+                if (!written) {
+                    Toast.makeText(requireContext(),
+                            R.string.ax_dynamic_bar_events_write_failed,
+                            Toast.LENGTH_SHORT).show();
+                }
+                return written;
+            });
+        }
+
+        final SwitchPreferenceCompat lockscreenMedia =
+                findPreference(KEY_LOCKSCREEN_MEDIA_ENABLED);
+        if (lockscreenMedia != null) {
+            lockscreenMedia.setPersistent(false);
+            lockscreenMedia.setOnPreferenceChangeListener((preference, newValue) -> {
+                final boolean value = (Boolean) newValue;
+                final boolean written = Settings.Secure.putIntForUser(
+                        requireContext().getContentResolver(),
+                        KEY_LOCKSCREEN_MEDIA_ENABLED,
                         value ? 1 : 0,
                         UserHandle.myUserId());
                 if (!written) {
@@ -207,6 +229,12 @@ public class DynamicBarSettingsFragment extends DashboardFragment {
             enabled.setChecked(isDynamicBarEnabled());
         }
 
+        final SwitchPreferenceCompat lockscreenMedia =
+                findPreference(KEY_LOCKSCREEN_MEDIA_ENABLED);
+        if (lockscreenMedia != null) {
+            lockscreenMedia.setChecked(isLockscreenMediaEnabled());
+        }
+
         final Set<String> disabled = readDisabledEventTypes();
         for (String eventType : EVENT_TYPE_IDS) {
             final SwitchPreferenceCompat preference =
@@ -221,6 +249,14 @@ public class DynamicBarSettingsFragment extends DashboardFragment {
         return Settings.Secure.getIntForUser(
                 requireContext().getContentResolver(),
                 KEY_ENABLED,
+                0,
+                UserHandle.myUserId()) == 1;
+    }
+
+    private boolean isLockscreenMediaEnabled() {
+        return Settings.Secure.getIntForUser(
+                requireContext().getContentResolver(),
+                KEY_LOCKSCREEN_MEDIA_ENABLED,
                 0,
                 UserHandle.myUserId()) == 1;
     }

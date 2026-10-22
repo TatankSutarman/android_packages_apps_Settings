@@ -4,6 +4,11 @@
     <string name="ax_dynamic_bar_summary">Tampilkan media, panggilan, perekaman layar, dan aktivitas berjalan lain di sekitar kamera. Chip status bar yang setara disembunyikan saat fitur ini aktif.</string>
     <string name="ax_dynamic_bar_settings_summary">Aktifkan Dynamic bar dan pilih event yang muncul di sekitar kamera.</string>
 
+    <string name="ax_dynamic_bar_category_lockscreen">Layar kunci</string>
+    <string name="ax_dynamic_bar_lockscreen_media_title">Pemutar media layar kunci</string>
+    <string name="ax_dynamic_bar_lockscreen_media_summary">Tampilkan bilah media ringkas di bagian bawah layar kunci. Ketuk untuk membuka kontrol pemutaran. Pemutar media bawaan layar kunci disembunyikan saat fitur ini aktif.</string>
+    <string name="keywords_ax_dynamic_bar_lockscreen_media">media layar kunci, musik layar kunci, pemutar musik, now playing</string>
+
     <string name="ax_dynamic_bar_category_media">Media dan panggilan</string>
     <string name="ax_dynamic_bar_category_system">Sistem dan konektivitas</string>
     <string name="ax_dynamic_bar_category_privacy">Privasi</string>
@@ -52,7 +57,7 @@
     <string name="ax_dynamic_bar_enable_all_summary">Aktifkan semua event Dynamic bar, termasuk yang eksperimental.</string>
     <string name="ax_dynamic_bar_reset_defaults_title">Pulihkan default yang disarankan</string>
     <string name="ax_dynamic_bar_reset_defaults_summary">Aktifkan event inti dan matikan event eksperimental lainnya.</string>
-    <string name="ax_dynamic_bar_events_footer">Perubahan langsung berlaku. Dynamic bar harus aktif agar event muncul.</string>
+    <string name="ax_dynamic_bar_events_footer">Perubahan langsung berlaku. Dynamic bar harus aktif agar event muncul. Pemutar media layar kunci berfungsi secara terpisah.</string>
 
     <string name="ax_dynamic_bar_events_write_failed">Tidak dapat memperbarui event Dynamic bar.</string>
     <string name="ax_dynamic_bar_events_all_enabled">Semua event Dynamic bar diaktifkan.</string>

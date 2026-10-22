@@ -5,6 +5,11 @@
     <string name="ax_dynamic_bar_settings_summary">Enable the Dynamic bar and choose which events appear around the camera cutout.</string>
     <string name="keywords_ax_dynamic_bar">dynamic bar, dynamic island, camera cutout, ongoing activity, media, call, screen recording</string>
 
+    <string name="ax_dynamic_bar_category_lockscreen">Lockscreen</string>
+    <string name="ax_dynamic_bar_lockscreen_media_title">Lockscreen media player</string>
+    <string name="ax_dynamic_bar_lockscreen_media_summary">Show a compact media bar at the bottom of the lockscreen. Tap it to expand playback controls. The built-in lockscreen media player is hidden while this is on.</string>
+    <string name="keywords_ax_dynamic_bar_lockscreen_media">lockscreen media, lockscreen music, music player, now playing</string>
+
     <string name="ax_dynamic_bar_category_media">Media and calls</string>
     <string name="ax_dynamic_bar_category_system">System and connectivity</string>
     <string name="ax_dynamic_bar_category_privacy">Privacy</string>
@@ -53,7 +58,7 @@
     <string name="ax_dynamic_bar_enable_all_summary">Turn on every Dynamic bar event, including experimental ones.</string>
     <string name="ax_dynamic_bar_reset_defaults_title">Restore recommended defaults</string>
     <string name="ax_dynamic_bar_reset_defaults_summary">Enable the core events and turn off the remaining experimental events.</string>
-    <string name="ax_dynamic_bar_events_footer">Changes apply immediately. The Dynamic bar must be enabled for events to appear.</string>
+    <string name="ax_dynamic_bar_events_footer">Changes apply immediately. The Dynamic bar must be enabled for events to appear. The lockscreen media player works independently.</string>
 
     <string name="ax_dynamic_bar_events_write_failed">Could not update Dynamic bar events.</string>
     <string name="ax_dynamic_bar_events_all_enabled">All Dynamic bar events enabled.</string>
