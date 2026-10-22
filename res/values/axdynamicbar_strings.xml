@@ -2,5 +2,60 @@
 <resources>
     <string name="ax_dynamic_bar_title">Dynamic bar</string>
     <string name="ax_dynamic_bar_summary">Show media, calls, screen recording, and other ongoing activities around the camera cutout. The equivalent status bar chips are hidden while this is on.</string>
+    <string name="ax_dynamic_bar_settings_summary">Enable the Dynamic bar and choose which events appear around the camera cutout.</string>
     <string name="keywords_ax_dynamic_bar">dynamic bar, dynamic island, camera cutout, ongoing activity, media, call, screen recording</string>
+
+    <string name="ax_dynamic_bar_category_media">Media and calls</string>
+    <string name="ax_dynamic_bar_category_system">System and connectivity</string>
+    <string name="ax_dynamic_bar_category_privacy">Privacy</string>
+    <string name="ax_dynamic_bar_category_advanced">Advanced</string>
+
+    <string name="ax_dynamic_bar_event_media_title">Media</string>
+    <string name="ax_dynamic_bar_event_media_summary">Show now playing and recently paused media.</string>
+    <string name="ax_dynamic_bar_event_call_title">Calls</string>
+    <string name="ax_dynamic_bar_event_call_summary">Show incoming and ongoing call events.</string>
+    <string name="ax_dynamic_bar_event_notification_title">Notifications</string>
+    <string name="ax_dynamic_bar_event_notification_summary">Show general notification events that are not calls, media, or recordings.</string>
+    <string name="ax_dynamic_bar_event_audio_recording_title">Audio recording</string>
+    <string name="ax_dynamic_bar_event_audio_recording_summary">Show active audio recording sessions and their controls.</string>
+    <string name="ax_dynamic_bar_event_aosp_chip_title">Ongoing activity chips</string>
+    <string name="ax_dynamic_bar_event_aosp_chip_summary">Show calls, sharing, screen recording, and casting chips. Turning this off may leave these chips without a replacement.</string>
+    <string name="ax_dynamic_bar_event_promoted_ongoing_title">Promoted activities</string>
+    <string name="ax_dynamic_bar_event_promoted_ongoing_summary">Show ongoing notifications that request promotion to the Dynamic bar.</string>
+
+    <string name="ax_dynamic_bar_event_charging_title">Charging</string>
+    <string name="ax_dynamic_bar_event_charging_summary">Show charging status and battery level.</string>
+    <string name="ax_dynamic_bar_event_bluetooth_title">Bluetooth devices</string>
+    <string name="ax_dynamic_bar_event_bluetooth_summary">Show Bluetooth connections and battery levels.</string>
+    <string name="ax_dynamic_bar_event_hotspot_title">Hotspot</string>
+    <string name="ax_dynamic_bar_event_hotspot_summary">Show how many devices are connected to the hotspot.</string>
+    <string name="ax_dynamic_bar_event_vpn_title">VPN</string>
+    <string name="ax_dynamic_bar_event_vpn_summary">Show connected VPN status.</string>
+    <string name="ax_dynamic_bar_event_alarm_title">Alarms</string>
+    <string name="ax_dynamic_bar_event_alarm_summary">Show upcoming and ringing alarms.</string>
+    <string name="ax_dynamic_bar_event_timer_title">Timers</string>
+    <string name="ax_dynamic_bar_event_timer_summary">Show active timers and their controls.</string>
+    <string name="ax_dynamic_bar_event_stopwatch_title">Stopwatch</string>
+    <string name="ax_dynamic_bar_event_stopwatch_summary">Show the active stopwatch and its controls.</string>
+    <string name="ax_dynamic_bar_event_ringer_title">Ringer mode</string>
+    <string name="ax_dynamic_bar_event_ringer_summary">Show silent and vibrate mode changes.</string>
+    <string name="ax_dynamic_bar_event_torch_title">Flashlight</string>
+    <string name="ax_dynamic_bar_event_torch_summary">Show the flashlight state and brightness controls.</string>
+    <string name="ax_dynamic_bar_event_biometric_unlock_title">Biometric unlock</string>
+    <string name="ax_dynamic_bar_event_biometric_unlock_summary">Show a brief indicator when the device is unlocked with biometrics.</string>
+
+    <string name="ax_dynamic_bar_event_clipboard_title">Clipboard</string>
+    <string name="ax_dynamic_bar_event_clipboard_summary">Show copied text, links, and images. Clipboard content may be visible on screen.</string>
+    <string name="ax_dynamic_bar_event_app_switch_title">Recent apps</string>
+    <string name="ax_dynamic_bar_event_app_switch_summary">Show recent app shortcuts after switching apps.</string>
+
+    <string name="ax_dynamic_bar_enable_all_title">Enable all events</string>
+    <string name="ax_dynamic_bar_enable_all_summary">Turn on every Dynamic bar event, including experimental ones.</string>
+    <string name="ax_dynamic_bar_reset_defaults_title">Restore recommended defaults</string>
+    <string name="ax_dynamic_bar_reset_defaults_summary">Enable the core events and turn off the remaining experimental events.</string>
+    <string name="ax_dynamic_bar_events_footer">Changes apply immediately. The Dynamic bar must be enabled for events to appear.</string>
+
+    <string name="ax_dynamic_bar_events_write_failed">Could not update Dynamic bar events.</string>
+    <string name="ax_dynamic_bar_events_all_enabled">All Dynamic bar events enabled.</string>
+    <string name="ax_dynamic_bar_events_reset_done">Dynamic bar events restored to recommended defaults.</string>
 </resources>

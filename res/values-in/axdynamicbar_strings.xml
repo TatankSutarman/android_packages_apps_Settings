@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ax_dynamic_bar_title">Dynamic bar</string>
+    <string name="ax_dynamic_bar_summary">Tampilkan media, panggilan, perekaman layar, dan aktivitas berjalan lain di sekitar kamera. Chip status bar yang setara disembunyikan saat fitur ini aktif.</string>
+    <string name="ax_dynamic_bar_settings_summary">Aktifkan Dynamic bar dan pilih event yang muncul di sekitar kamera.</string>
+
+    <string name="ax_dynamic_bar_category_media">Media dan panggilan</string>
+    <string name="ax_dynamic_bar_category_system">Sistem dan konektivitas</string>
+    <string name="ax_dynamic_bar_category_privacy">Privasi</string>
+    <string name="ax_dynamic_bar_category_advanced">Lanjutan</string>
+
+    <string name="ax_dynamic_bar_event_media_title">Media</string>
+    <string name="ax_dynamic_bar_event_media_summary">Tampilkan media yang sedang diputar dan yang baru dijeda.</string>
+    <string name="ax_dynamic_bar_event_call_title">Panggilan</string>
+    <string name="ax_dynamic_bar_event_call_summary">Tampilkan peristiwa panggilan masuk dan panggilan berlangsung.</string>
+    <string name="ax_dynamic_bar_event_notification_title">Notifikasi</string>
+    <string name="ax_dynamic_bar_event_notification_summary">Tampilkan notifikasi umum yang bukan panggilan, media, atau rekaman.</string>
+    <string name="ax_dynamic_bar_event_audio_recording_title">Perekaman audio</string>
+    <string name="ax_dynamic_bar_event_audio_recording_summary">Tampilkan sesi perekaman audio aktif beserta kontrolnya.</string>
+    <string name="ax_dynamic_bar_event_aosp_chip_title">Chip aktivitas berjalan</string>
+    <string name="ax_dynamic_bar_event_aosp_chip_summary">Tampilkan chip panggilan, berbagi, rekam layar, dan cast. Mematikan ini dapat membuat chip tersebut tanpa pengganti.</string>
+    <string name="ax_dynamic_bar_event_promoted_ongoing_title">Aktivitas yang dipromosikan</string>
+    <string name="ax_dynamic_bar_event_promoted_ongoing_summary">Tampilkan notifikasi berjalan yang meminta ditampilkan di Dynamic bar.</string>
+
+    <string name="ax_dynamic_bar_event_charging_title">Pengisian daya</string>
+    <string name="ax_dynamic_bar_event_charging_summary">Tampilkan status pengisian dan level baterai.</string>
+    <string name="ax_dynamic_bar_event_bluetooth_title">Perangkat Bluetooth</string>
+    <string name="ax_dynamic_bar_event_bluetooth_summary">Tampilkan koneksi Bluetooth dan level baterai.</string>
+    <string name="ax_dynamic_bar_event_hotspot_title">Hotspot</string>
+    <string name="ax_dynamic_bar_event_hotspot_summary">Tampilkan jumlah perangkat yang terhubung ke hotspot.</string>
+    <string name="ax_dynamic_bar_event_vpn_title">VPN</string>
+    <string name="ax_dynamic_bar_event_vpn_summary">Tampilkan status VPN yang terhubung.</string>
+    <string name="ax_dynamic_bar_event_alarm_title">Alarm</string>
+    <string name="ax_dynamic_bar_event_alarm_summary">Tampilkan alarm yang akan datang dan yang berbunyi.</string>
+    <string name="ax_dynamic_bar_event_timer_title">Timer</string>
+    <string name="ax_dynamic_bar_event_timer_summary">Tampilkan timer aktif dan kontrolnya.</string>
+    <string name="ax_dynamic_bar_event_stopwatch_title">Stopwatch</string>
+    <string name="ax_dynamic_bar_event_stopwatch_summary">Tampilkan stopwatch aktif dan kontrolnya.</string>
+    <string name="ax_dynamic_bar_event_ringer_title">Mode dering</string>
+    <string name="ax_dynamic_bar_event_ringer_summary">Tampilkan perubahan mode senyap dan getar.</string>
+    <string name="ax_dynamic_bar_event_torch_title">Senter</string>
+    <string name="ax_dynamic_bar_event_torch_summary">Tampilkan status senter dan kontrol kecerahan.</string>
+    <string name="ax_dynamic_bar_event_biometric_unlock_title">Buka kunci biometrik</string>
+    <string name="ax_dynamic_bar_event_biometric_unlock_summary">Tampilkan indikator singkat saat perangkat dibuka dengan biometrik.</string>
+
+    <string name="ax_dynamic_bar_event_clipboard_title">Papan klip</string>
+    <string name="ax_dynamic_bar_event_clipboard_summary">Tampilkan teks, tautan, dan gambar yang disalin. Isi papan klip dapat terlihat di layar.</string>
+    <string name="ax_dynamic_bar_event_app_switch_title">Aplikasi terbaru</string>
+    <string name="ax_dynamic_bar_event_app_switch_summary">Tampilkan pintasan aplikasi terbaru setelah berpindah aplikasi.</string>
+
+    <string name="ax_dynamic_bar_enable_all_title">Aktifkan semua event</string>
+    <string name="ax_dynamic_bar_enable_all_summary">Aktifkan semua event Dynamic bar, termasuk yang eksperimental.</string>
+    <string name="ax_dynamic_bar_reset_defaults_title">Pulihkan default yang disarankan</string>
+    <string name="ax_dynamic_bar_reset_defaults_summary">Aktifkan event inti dan matikan event eksperimental lainnya.</string>
+    <string name="ax_dynamic_bar_events_footer">Perubahan langsung berlaku. Dynamic bar harus aktif agar event muncul.</string>
+
+    <string name="ax_dynamic_bar_events_write_failed">Tidak dapat memperbarui event Dynamic bar.</string>
+    <string name="ax_dynamic_bar_events_all_enabled">Semua event Dynamic bar diaktifkan.</string>
+    <string name="ax_dynamic_bar_events_reset_done">Event Dynamic bar dipulihkan ke default yang disarankan.</string>
+</resources>
