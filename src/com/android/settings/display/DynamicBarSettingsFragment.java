@@ -17,6 +17,9 @@
 package com.android.settings.display;
 
 import android.app.settings.SettingsEnums;
+import android.content.ActivityNotFoundException;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.provider.Settings;
@@ -55,6 +58,13 @@ public class DynamicBarSettingsFragment extends DashboardFragment {
     private static final String KEY_ENABLED = "ax_dynamic_bar_enabled";
     private static final String KEY_LOCKSCREEN_MEDIA_ENABLED =
             "infinity_bar_lockscreen_media_enabled";
+    private static final String KEY_LOCKSCREEN_WEATHER_ENABLED =
+            "infinity_bar_lockscreen_weather_enabled";
+    private static final String KEY_LOCKSCREEN_WEATHER_SETTINGS =
+            "infinity_bar_lockscreen_weather_settings";
+    private static final String OMNIJAWS_PACKAGE = "org.omnirom.omnijaws";
+    private static final String OMNIJAWS_SETTINGS_CLASS =
+            "org.omnirom.omnijaws.SettingsActivity";
     private static final String KEY_EVENTS = "ax_dynamic_bar_events";
     private static final String KEY_ENABLE_ALL = "dynamic_bar_enable_all";
     private static final String KEY_RESET_DEFAULTS = "dynamic_bar_reset_defaults";
@@ -152,6 +162,42 @@ public class DynamicBarSettingsFragment extends DashboardFragment {
             });
         }
 
+        final SwitchPreferenceCompat lockscreenWeather =
+                findPreference(KEY_LOCKSCREEN_WEATHER_ENABLED);
+        if (lockscreenWeather != null) {
+            lockscreenWeather.setPersistent(false);
+            lockscreenWeather.setOnPreferenceChangeListener((preference, newValue) -> {
+                final boolean value = (Boolean) newValue;
+                final boolean written = Settings.Secure.putIntForUser(
+                        requireContext().getContentResolver(),
+                        KEY_LOCKSCREEN_WEATHER_ENABLED,
+                        value ? 1 : 0,
+                        UserHandle.myUserId());
+                if (!written) {
+                    Toast.makeText(requireContext(),
+                            R.string.ax_dynamic_bar_events_write_failed,
+                            Toast.LENGTH_SHORT).show();
+                }
+                return written;
+            });
+        }
+
+        final Preference weatherSettings = findPreference(KEY_LOCKSCREEN_WEATHER_SETTINGS);
+        if (weatherSettings != null) {
+            weatherSettings.setOnPreferenceClickListener(preference -> {
+                final Intent intent = new Intent(Intent.ACTION_MAIN)
+                        .setClassName(OMNIJAWS_PACKAGE, OMNIJAWS_SETTINGS_CLASS);
+                try {
+                    startActivity(intent);
+                } catch (ActivityNotFoundException | SecurityException e) {
+                    Toast.makeText(requireContext(),
+                            R.string.ax_dynamic_bar_lockscreen_weather_unavailable,
+                            Toast.LENGTH_SHORT).show();
+                }
+                return true;
+            });
+        }
+
         for (String eventType : EVENT_TYPE_IDS) {
             final SwitchPreferenceCompat preference =
                     findPreference(EVENT_PREFERENCE_PREFIX + eventType);
@@ -235,6 +281,17 @@ public class DynamicBarSettingsFragment extends DashboardFragment {
             lockscreenMedia.setChecked(isLockscreenMediaEnabled());
         }
 
+        final SwitchPreferenceCompat lockscreenWeather =
+                findPreference(KEY_LOCKSCREEN_WEATHER_ENABLED);
+        if (lockscreenWeather != null) {
+            lockscreenWeather.setChecked(isLockscreenWeatherEnabled());
+        }
+
+        final Preference weatherSettings = findPreference(KEY_LOCKSCREEN_WEATHER_SETTINGS);
+        if (weatherSettings != null) {
+            weatherSettings.setEnabled(isOmniJawsInstalled());
+        }
+
         final Set<String> disabled = readDisabledEventTypes();
         for (String eventType : EVENT_TYPE_IDS) {
             final SwitchPreferenceCompat preference =
@@ -259,6 +316,24 @@ public class DynamicBarSettingsFragment extends DashboardFragment {
                 KEY_LOCKSCREEN_MEDIA_ENABLED,
                 0,
                 UserHandle.myUserId()) == 1;
+    }
+
+    private boolean isLockscreenWeatherEnabled() {
+        return Settings.Secure.getIntForUser(
+                requireContext().getContentResolver(),
+                KEY_LOCKSCREEN_WEATHER_ENABLED,
+                0,
+                UserHandle.myUserId()) == 1;
+    }
+
+    private boolean isOmniJawsInstalled() {
+        try {
+            requireContext().getPackageManager().getPackageInfo(
+                    OMNIJAWS_PACKAGE, PackageManager.GET_ACTIVITIES);
+            return true;
+        } catch (PackageManager.NameNotFoundException | SecurityException e) {
+            return false;
+        }
     }
 
     private Set<String> readDisabledEventTypes() {

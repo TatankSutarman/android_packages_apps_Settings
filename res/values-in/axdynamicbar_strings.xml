@@ -9,6 +9,13 @@
     <string name="ax_dynamic_bar_lockscreen_media_summary">Tampilkan bilah media ringkas di bagian bawah layar kunci. Ketuk untuk membuka kontrol pemutaran. Pemutar media bawaan layar kunci disembunyikan saat fitur ini aktif.</string>
     <string name="keywords_ax_dynamic_bar_lockscreen_media">media layar kunci, musik layar kunci, pemutar musik, now playing</string>
 
+    <string name="ax_dynamic_bar_lockscreen_weather_title">Cuaca layar kunci</string>
+    <string name="ax_dynamic_bar_lockscreen_weather_summary">Tampilkan suhu dan kondisi cuaca saat ini di bawah jam layar kunci. Memerlukan OmniJaws; aktifkan pembaruan cuaca di pengaturannya. Tidak ditampilkan di always-on display.</string>
+    <string name="keywords_ax_dynamic_bar_lockscreen_weather">cuaca layar kunci, cuaca, suhu, prakiraan, omnijaws</string>
+    <string name="ax_dynamic_bar_lockscreen_weather_settings_title">Pengaturan cuaca OmniJaws</string>
+    <string name="ax_dynamic_bar_lockscreen_weather_settings_summary">Pilih penyedia, lokasi, dan satuan, serta aktifkan pembaruan cuaca.</string>
+    <string name="ax_dynamic_bar_lockscreen_weather_unavailable">OmniJaws belum terpasang.</string>
+
     <string name="ax_dynamic_bar_category_media">Media dan panggilan</string>
     <string name="ax_dynamic_bar_category_system">Sistem dan konektivitas</string>
     <string name="ax_dynamic_bar_category_privacy">Privasi</string>
@@ -57,7 +64,7 @@
     <string name="ax_dynamic_bar_enable_all_summary">Aktifkan semua event Dynamic bar, termasuk yang eksperimental.</string>
     <string name="ax_dynamic_bar_reset_defaults_title">Pulihkan default yang disarankan</string>
     <string name="ax_dynamic_bar_reset_defaults_summary">Aktifkan event inti dan matikan event eksperimental lainnya.</string>
-    <string name="ax_dynamic_bar_events_footer">Perubahan langsung berlaku. Dynamic bar harus aktif agar event muncul. Pemutar media layar kunci berfungsi secara terpisah.</string>
+    <string name="ax_dynamic_bar_events_footer">Perubahan langsung berlaku. Dynamic bar harus aktif agar event muncul. Pemutar media layar kunci dan baris cuaca berfungsi secara terpisah.</string>
 
     <string name="ax_dynamic_bar_events_write_failed">Tidak dapat memperbarui event Dynamic bar.</string>
     <string name="ax_dynamic_bar_events_all_enabled">Semua event Dynamic bar diaktifkan.</string>

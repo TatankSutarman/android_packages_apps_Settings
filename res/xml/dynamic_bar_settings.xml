@@ -37,6 +37,19 @@
             android:summary="@string/ax_dynamic_bar_lockscreen_media_summary"
             android:persistent="false"
             settings:keywords="@string/keywords_ax_dynamic_bar_lockscreen_media" />
+
+        <SwitchPreferenceCompat
+            android:key="infinity_bar_lockscreen_weather_enabled"
+            android:title="@string/ax_dynamic_bar_lockscreen_weather_title"
+            android:summary="@string/ax_dynamic_bar_lockscreen_weather_summary"
+            android:persistent="false"
+            settings:keywords="@string/keywords_ax_dynamic_bar_lockscreen_weather" />
+
+        <Preference
+            android:key="infinity_bar_lockscreen_weather_settings"
+            android:title="@string/ax_dynamic_bar_lockscreen_weather_settings_title"
+            android:summary="@string/ax_dynamic_bar_lockscreen_weather_settings_summary"
+            android:persistent="false" />
     </PreferenceCategory>
 
     <PreferenceCategory

@@ -10,6 +10,13 @@
     <string name="ax_dynamic_bar_lockscreen_media_summary">Show a compact media bar at the bottom of the lockscreen. Tap it to expand playback controls. The built-in lockscreen media player is hidden while this is on.</string>
     <string name="keywords_ax_dynamic_bar_lockscreen_media">lockscreen media, lockscreen music, music player, now playing</string>
 
+    <string name="ax_dynamic_bar_lockscreen_weather_title">Lockscreen weather</string>
+    <string name="ax_dynamic_bar_lockscreen_weather_summary">Show the current temperature and condition below the lockscreen clock. Requires OmniJaws; enable weather updates in its settings. Hidden on the always-on display.</string>
+    <string name="keywords_ax_dynamic_bar_lockscreen_weather">lockscreen weather, weather, temperature, forecast, omnijaws</string>
+    <string name="ax_dynamic_bar_lockscreen_weather_settings_title">OmniJaws weather settings</string>
+    <string name="ax_dynamic_bar_lockscreen_weather_settings_summary">Choose the provider, location, and units, and enable weather updates.</string>
+    <string name="ax_dynamic_bar_lockscreen_weather_unavailable">OmniJaws is not installed.</string>
+
     <string name="ax_dynamic_bar_category_media">Media and calls</string>
     <string name="ax_dynamic_bar_category_system">System and connectivity</string>
     <string name="ax_dynamic_bar_category_privacy">Privacy</string>
@@ -58,7 +65,7 @@
     <string name="ax_dynamic_bar_enable_all_summary">Turn on every Dynamic bar event, including experimental ones.</string>
     <string name="ax_dynamic_bar_reset_defaults_title">Restore recommended defaults</string>
     <string name="ax_dynamic_bar_reset_defaults_summary">Enable the core events and turn off the remaining experimental events.</string>
-    <string name="ax_dynamic_bar_events_footer">Changes apply immediately. The Dynamic bar must be enabled for events to appear. The lockscreen media player works independently.</string>
+    <string name="ax_dynamic_bar_events_footer">Changes apply immediately. The Dynamic bar must be enabled for events to appear. The lockscreen media player and weather line work independently.</string>
 
     <string name="ax_dynamic_bar_events_write_failed">Could not update Dynamic bar events.</string>
     <string name="ax_dynamic_bar_events_all_enabled">All Dynamic bar events enabled.</string>
